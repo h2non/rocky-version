@@ -1,5 +1,6 @@
 # rocky-version
-rocky middleware for HTTP version based traffic router
+
+HTTP API version based routing middleware using [rocky](https://github.com/h2non/rocky) + [express](https://github.com/strongloop/express) + [http-version](https://github.com/h2non/http-version)
 
 ## Usage
 
