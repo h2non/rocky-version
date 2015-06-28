@@ -8,7 +8,6 @@ HTTP API version based routing middleware using [rocky](https://github.com/h2non
 var express = require('express')
 var rocky = require('rocky')
 var version = require('http-version')
-var request = require('supertest')
 
 // Configure rocky proxies
 var oldAPIProxy = rocky()
@@ -45,6 +44,8 @@ newAPIServer.listen(3002)
 
 Test it!
 ```js
+var request = require('supertest')
+
 request('http://localhost:3000')
   .get('/test')
   .set('Version', '1.0')
