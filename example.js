@@ -1,9 +1,3 @@
-# rocky-version
-rocky middleware for HTTP version based traffic router
-
-## Usage
-
-```js
 var express = require('express')
 var rocky = require('rocky')
 var version = require('http-version')
@@ -40,10 +34,8 @@ newAPIServer.use(function (res, res) {
   res.end('Hello from new API')
 })
 newAPIServer.listen(3002)
-```
 
-Test it!
-```js
+// Test requests
 request('http://localhost:3000')
   .get('/test')
   .set('Version', '1.0')
@@ -65,4 +57,3 @@ request('http://localhost:3000')
     }
     console.log('New API server success')
   })
-```
